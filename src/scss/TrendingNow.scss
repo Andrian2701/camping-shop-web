@@ -1,0 +1,114 @@
+@use "./global/colors" as *;
+@use "./global/typhography" as *;
+@use "./global/mixins" as *;
+
+.trending-now {
+  width: 100%;
+  margin-top: 90px;
+  @include flex-center;
+
+  .container {
+    width: 100%;
+    @include flex-column;
+
+    .items-header {
+      height: 20%;
+      @include space-between;
+
+      h2 {
+        font-size: 1.4rem;
+        font-weight: $fw-700;
+      }
+
+      .slide-buttons {
+        display: flex;
+        justify-content: space-around;
+        gap: 0.625rem;
+
+        button {
+          height: 2.3rem;
+          width: 2.3rem;
+          border: none;
+          font-size: 1.6rem;
+          transition: all 0.1s ease-in;
+          background-color: $light-black;
+          color: $color-white;
+          cursor: pointer;
+          @include flex-center;
+
+          &:hover {
+            background-color: $dark-black;
+            border: 2px solid $dark-black;
+          }
+        }
+      }
+    }
+
+    .trending-stuffs {
+      display: flex;
+      margin-top: 1.9rem;
+      gap: 1.3rem;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      scroll-behavior: smooth;
+      position: relative;
+
+      &::-webkit-scrollbar {
+        display: none;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: $light-black;
+
+        .item {
+          height: 18.8rem;
+          @include flex-column;
+          outline: 2px solid rgba(0, 0, 0, 0.205);
+          outline-offset: -2px;
+          transition: all 0.15s ease-in;
+          cursor: pointer;
+
+          &:hover {
+            outline: 2px solid $light-black;
+          }
+
+          .item-header {
+            height: 75%;
+            width: 100%;
+            display: flex;
+
+            img {
+              height: 87%;
+              width: 100%;
+            }
+          }
+
+          .item-details {
+            height: 25%;
+            width: 100%;
+            @include flex-column;
+
+            p {
+              height: 100%;
+              width: 100%;
+              margin-left: 0.625rem;
+              font-size: 1rem;
+            }
+
+            .item-price {
+              height: 100%;
+              width: 14rem;
+              margin-left: 0.625rem;
+              font-size: 1.3rem;
+              font-weight: $fw-600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

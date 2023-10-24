@@ -1,0 +1,106 @@
+@use "./global/colors" as *;
+@use "./global/typhography" as *;
+@use "./global/mixins" as *;
+
+.category-items {
+  width: 100%;
+  margin-top: 5.6rem;
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: $fw-700;
+  }
+
+  .items {
+    width: 100%;
+    margin-top: 1.9rem;
+    gap: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    a {
+      text-decoration: none;
+      color: $light-black;
+
+      .item {
+        @include flex-column;
+        width: 100%;
+        height: 21rem;
+        outline: 2px solid rgba(0, 0, 0, 0.205);
+        outline-offset: -2px;
+        transition: all 0.15s ease-in;
+        cursor: pointer;
+
+        &:hover {
+          outline: 2px solid $light-black;
+          transition: all 0.15s ease-in;
+        }
+
+        .item-header {
+          height: 75%;
+          width: 100%;
+          display: flex;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .item-details {
+          height: 25%;
+          width: 100%;
+          @include flex-column;
+
+          p {
+            width: 95%;
+            height: 100%;
+            padding-left: 0.6rem;
+            font-size: 1rem;
+          }
+
+          .item-price {
+            width: 96%;
+            height: 100%;
+            padding-left: 0.6rem;
+            font-size: 1.3rem;
+            font-weight: $fw-600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .category-items {
+    .items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      a {
+        .item {
+          height: 20rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .category-items {
+    .items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .category-items {
+    .items {
+      grid-template-columns: 1fr;
+    }
+  }
+}

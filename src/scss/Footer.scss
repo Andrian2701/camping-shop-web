@@ -1,0 +1,203 @@
+@use "./global/colors" as *;
+@use "./global/typhography" as *;
+@use "./global/mixins" as *;
+
+footer {
+  width: 100%;
+  height: 21.9rem;
+  margin-top: 5.6rem;
+  margin-bottom: 1rem;
+  @include flex-column;
+
+  .social-links {
+    width: 100%;
+    height: 10%;
+    gap: 3.125rem;
+    @include flex-center;
+
+    span {
+      a {
+        color: $light-black;
+        cursor: pointer;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .details {
+    height: 80%;
+    width: 100%;
+    margin-top: 1.25rem;
+    @include space-between;
+
+    .first-col {
+      height: 100%;
+      gap: 1.25rem;
+      @include flex-column;
+
+      label {
+        font-size: 0.9rem;
+      }
+
+      .info-links {
+        list-style: none;
+        gap: 0.5rem;
+        @include flex-column;
+
+        li {
+          a {
+            color: $light-black;
+            cursor: pointer;
+            transition: all 0.3 ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .sec-col {
+      height: 100%;
+      gap: 1.25rem;
+      @include flex-column;
+
+      label {
+        font-size: 0.9rem;
+      }
+
+      .help-links {
+        list-style: none;
+        gap: 0.5rem;
+        @include flex-column;
+
+        li {
+          a {
+            color: $light-black;
+            cursor: pointer;
+            transition: all 0.3 ease;
+            text-decoration: none;
+            font-size: 0.9rem;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .third-col {
+      height: 100%;
+      gap: 1.25rem;
+      @include flex-column;
+
+      label {
+        font-size: 0.9rem;
+      }
+
+      form {
+        @include flex-column;
+        gap: 1.25rem;
+        height: 100%;
+
+        input {
+          width: 16.25rem;
+          height: 2rem;
+          outline: none;
+          padding-left: 0.4rem;
+          outline: 2px solid rgba(0, 0, 0, 0.205);
+          border: none;
+        }
+
+        button {
+          width: 10rem;
+          height: 2.7rem;
+          border: none;
+          background-color: $light-black;
+          border: 2px solid $light-black;
+          color: $color-white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $dark-black;
+            border: 2px solid $dark-black;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    label {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    height: 36.5rem;
+
+    .details {
+      .nav-links {
+        width: 50%;
+        height: 100%;
+        @include flex-column;
+
+        .first-col {
+          width: 100%;
+        }
+
+        .sec-col {
+          width: 100%;
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .newsletter {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .third-col {
+        height: 100%;
+        width: 100%;
+        gap: 1.25rem;
+        @include flex-column;
+
+        form {
+          input {
+            width: 16.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  footer {
+    .newsletter {
+      .third-col {
+        form {
+          input {
+            width: 13.7rem;
+          }
+        }
+      }
+    }
+  }
+}

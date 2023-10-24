@@ -1,0 +1,333 @@
+@use "./global/colors" as *;
+@use "./global/typhography" as *;
+@use "./global/mixins" as *;
+
+.product-container {
+  @include flex-column;
+  width: 100%;
+  height: 100%;
+  margin-top: 8.8rem;
+
+  .product-div {
+    width: 100%;
+    @include flex-column;
+
+    label {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: $fw-700;
+    }
+
+    .product {
+      @include flex-center;
+      margin-top: 1.9rem;
+
+      .first-col {
+        width: 50%;
+        height: 37.5rem;
+
+        .big-img {
+          width: 100%;
+          @include flex-center;
+
+          img {
+            width: 75%;
+            height: 25rem;
+          }
+        }
+
+        .small-imgs {
+          width: 100%;
+          height: 12.5rem;
+          @include flex-center;
+          gap: 20px;
+
+          img {
+            width: 25%;
+            height: 9.3rem;
+            cursor: pointer;
+
+            &:hover {
+              outline: 1px solid $color-grey;
+              box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+      }
+
+      .sec-col {
+        width: 50%;
+        background-color: $light-grey;
+        height: 37.5rem;
+
+        .content {
+          padding: 8.75rem 3.125rem 6.25rem 3.125rem;
+
+          p {
+            font-size: 1.125rem;
+          }
+
+          .product-quant {
+            width: 100%;
+            margin-top: 3.75rem;
+            @include space-between;
+
+            p {
+              font-weight: $fw-700;
+              font-size: 1.375rem;
+            }
+
+            .inc-dec {
+              @include flex-center;
+              border: 1px solid $light-black;
+
+              p {
+                font-weight: $fw-600;
+                font-size: 1.375rem;
+                @include flex-center;
+                width: 3.125rem;
+                height: 3rem;
+              }
+
+              .minus {
+                border: none;
+                border-right: 1px solid $light-black;
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.7rem;
+                font-weight: $fw-600;
+                background-color: $color-white;
+                cursor: pointer;
+                transition: all 0.15s ease-in;
+
+                &:hover {
+                  background-color: $light-grey;
+                }
+              }
+
+              .plus {
+                border: none;
+                border-left: 1px solid $light-black;
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.7rem;
+                font-weight: $fw-600;
+                background-color: $color-white;
+                cursor: pointer;
+                transition: all 0.15s ease-in;
+
+                &:hover {
+                  background-color: $light-grey;
+                }
+              }
+            }
+          }
+        }
+
+        .add-buy {
+          width: 100%;
+          margin-top: 3.125rem;
+          @include flex-center;
+          gap: 1.25rem;
+
+          .add {
+            width: 15.6rem;
+            height: 3rem;
+            border: none;
+            font-size: 1rem;
+            font-weight: $fw-600;
+            color: $light-black;
+            border: 2px solid $light-black;
+            background-color: $light-grey;
+            cursor: pointer;
+            transition: all 0.15s ease-in;
+
+            &:hover {
+              background-color: $light-black;
+              color: $color-white;
+            }
+          }
+
+          .buy {
+            width: 15.6rem;
+            height: 3rem;
+            border: none;
+            font-size: 1rem;
+            font-weight: $fw-600;
+            background-color: $light-black;
+            color: $color-white;
+            cursor: pointer;
+            transition: all 0.15s ease-in;
+
+            &:hover {
+              border: 2px solid $light-black;
+              background-color: $light-grey;
+              color: $light-black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .specifications {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.9rem;
+    margin-top: 5.6rem;
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1.5rem;
+      background-color: $light-grey;
+
+      label {
+        font-size: 1.2rem;
+        font-weight: $fw-700;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin-top: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .product-container {
+    .product-div {
+      .product {
+        @include flex-column;
+
+        .first-col {
+          width: 100%;
+
+          .big-img {
+            img {
+              width: 50%;
+            }
+          }
+
+          .small-imgs {
+            margin-top: 30px;
+            img {
+              height: 100%;
+            }
+          }
+        }
+
+        .sec-col {
+          margin-top: 90px;
+          height: auto;
+          width: 100%;
+
+          .content {
+            padding: 40px 50px 50px 50px;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    .product-div {
+      .product {
+        .first-col {
+          .big-img {
+            img {
+              width: 50%;
+            }
+          }
+
+          .small-imgs {
+            img {
+              height: 90%;
+            }
+          }
+        }
+
+        .sec-col {
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .product-container {
+    .product-div {
+      .product {
+        .first-col {
+          width: 100%;
+
+          .big-img {
+            img {
+              width: 50%;
+            }
+          }
+
+          .small-imgs {
+            img {
+              height: 50%;
+            }
+          }
+        }
+
+        .sec-col {
+          height: auto;
+        }
+      }
+    }
+
+    .specifications {
+      width: 100%;
+      gap: 1.9rem;
+      @include flex-column;
+
+      .details {
+        width: 91%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .product-container {
+    .product-div {
+      .product {
+        .first-col {
+          .big-img {
+            img {
+              width: 80%;
+            }
+          }
+
+          .small-imgs {
+            img {
+              height: 60%;
+            }
+          }
+        }
+
+        .sec-col {
+          height: auto;
+        }
+      }
+    }
+
+    .specifications {
+      .details {
+        width: 89.5%;
+      }
+    }
+  }
+}

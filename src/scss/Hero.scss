@@ -1,0 +1,79 @@
+@use "./global/colors" as *;
+@use "./global/typhography" as *;
+@use "./global/mixins" as *;
+
+.grid-container {
+  width: 100%;
+  height: 30rem;
+  margin-top: 9rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1.7fr 0.8fr 0.8fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "one two four" "one two four-low";
+
+  .featured {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    .description {
+      position: absolute;
+      bottom: 1.3rem;
+      left: 1.5rem;
+      font-size: 2rem;
+      font-weight: $fw-600;
+      color: $color-white;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+}
+
+.grid-one {
+  grid-area: one;
+}
+
+.grid-two {
+  grid-area: two;
+}
+
+.grid-four {
+  grid-area: four;
+}
+
+.grid-four-low {
+  grid-area: four-low;
+}
+
+.mini-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $color-grey;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    background-color: $hover-black;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    height: 500px;
+    gap: 13px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "one two"
+      "four four-low";
+  }
+}

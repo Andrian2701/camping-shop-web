@@ -1,0 +1,108 @@
+@use "./global/colors" as *;
+@use "./global/typhography" as *;
+@use "./global/mixins" as *;
+
+.shop-cart {
+  width: 26.25rem;
+  height: 100vh;
+  padding: 2rem 2.5rem 1.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  @include flex-column;
+  background-color: $color-white;
+  transition: all 0.4s ease;
+  z-index: 1000;
+
+  .cart-title {
+    @include space-between;
+
+    label {
+      font-size: 1.25rem;
+      font-weight: $fw-700;
+    }
+
+    .close-icon {
+      font-size: 1.8rem;
+      transition: all 3 ease;
+      color: $light-black;
+      cursor: pointer;
+    }
+  }
+
+  .cart-body {
+    height: 100vh;
+
+    .cart-content {
+      height: 25.3rem;
+      margin-top: 1.9rem;
+      gap: 1.25rem;
+      @include flex-column;
+      align-items: center;
+      overflow-y: scroll;
+
+      .refresh-btn {
+        width: 10rem;
+        height: 2.7rem;
+        border-radius: none;
+        margin-top: 200px;
+        cursor: pointer;
+      }
+    }
+
+    .total {
+      width: 98%;
+      height: 7.6rem;
+      @include flex-center;
+      border-top: 2px solid $light-grey;
+
+      .left-row {
+        width: 50%;
+        @include flex-column;
+        gap: 0.3rem;
+        margin-bottom: 1.8rem;
+
+        p {
+          font-size: 1.6rem;
+          font-weight: $fw-700;
+        }
+
+        .price {
+          font-weight: $fw-700;
+          font-size: 1.25rem;
+        }
+      }
+
+      .right-row {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        button {
+          width: 15.6rem;
+          height: 3rem;
+          border: none;
+          font-size: 1rem;
+          font-weight: $fw-600;
+          border: $light-black;
+          color: $light-black;
+          border: 2px solid $light-black;
+          background-color: $color-white;
+          cursor: pointer;
+          transition: all 0.15s ease-in;
+
+          &:hover {
+            background-color: $light-black;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  &.closed {
+    right: -100%;
+    transition: all 0.4s ease;
+  }
+}
