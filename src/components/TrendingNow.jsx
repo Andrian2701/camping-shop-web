@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
 import { HiArrowSmRight } from "react-icons/hi";
@@ -5,14 +6,15 @@ import TrendingItem from "./TrendingItem";
 
 export default function TrendingNow({ selectedImg, handleSetSelectedImg }) {
   const loc = useLocation();
+  const ref = useRef(null);
 
   const slideLeft = () => {
-    let slider = document.getElementById("slider");
+    let slider = ref.current;
     slider.scrollLeft = slider.scrollLeft - 230;
   };
 
   const slideRight = () => {
-    let slider = document.getElementById("slider");
+    let slider = ref.current;
     slider.scrollLeft = slider.scrollLeft + 230;
   };
 
@@ -30,7 +32,7 @@ export default function TrendingNow({ selectedImg, handleSetSelectedImg }) {
             </button>
           </div>
         </div>
-        <div className="trending-stuffs" id="slider">
+        <div className="trending-items" ref={ref} id="slider">
           <TrendingItem
             selectedImg={selectedImg}
             handleSetSelectedImg={handleSetSelectedImg}

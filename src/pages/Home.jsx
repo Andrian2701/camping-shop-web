@@ -6,7 +6,7 @@ import BannerReverse from "../components/BannerReverse";
 import TrendingNow from "../components/TrendingNow";
 import Footer from "../components/Footer";
 
-export default function HomePage({}) {
+export default function HomePage() {
   return (
     <>
       <HomeHeader />
