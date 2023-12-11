@@ -9,10 +9,7 @@ export default function Banner() {
         <div className="content">
           <h2>Fall adventures await</h2>
           <p>Embrace the crisp air, golden leaves, and cozy campfires.</p>
-          <Link
-            to="/product-categories/all"
-            onClick={() => window.scrollTo(0, 0)}
-          >
+          <Link to="/categories/all">
             <button>Shop Fall</button>
           </Link>
         </div>

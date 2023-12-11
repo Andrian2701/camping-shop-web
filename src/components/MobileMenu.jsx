@@ -14,17 +14,15 @@ export default function MobileMenu() {
         <RiCloseFill
           onClick={() => {
             dispatch(closeMobMenuAction());
-            window.scrollTo(0, 0);
           }}
         />
       </div>
       <div className="nav-links">
         <li>
           <Link
-            to="product-categories/all"
+            to="/categories/all"
             onClick={() => {
               dispatch(closeMobMenuAction());
-              window.scrollTo(0, 0);
             }}
           >
             SALE
@@ -32,10 +30,9 @@ export default function MobileMenu() {
         </li>
         <li>
           <Link
-            to="product-categories/outfits"
+            to="/categories/outfits"
             onClick={() => {
               dispatch(closeMobMenuAction());
-              window.scrollTo(0, 0);
             }}
           >
             OUTFITS
@@ -43,10 +40,9 @@ export default function MobileMenu() {
         </li>
         <li>
           <Link
-            to="product-categories/gadgets"
+            to="/categories/gadgets"
             onClick={() => {
               dispatch(closeMobMenuAction());
-              window.scrollTo(0, 0);
             }}
           >
             GADGETS
@@ -54,10 +50,9 @@ export default function MobileMenu() {
         </li>
         <li>
           <Link
-            to="product-categories/camping-kitchen"
+            to="/categories/camping-kitchen"
             onClick={() => {
               dispatch(closeMobMenuAction());
-              window.scrollTo(0, 0);
             }}
           >
             CAMP KITCHEN
@@ -65,10 +60,9 @@ export default function MobileMenu() {
         </li>
         <li>
           <Link
-            to="product-categories/camping-furniture"
+            to="/categories/camping-furniture"
             onClick={() => {
               dispatch(closeMobMenuAction());
-              window.scrollTo(0, 0);
             }}
           >
             CAMP FURNITURE
@@ -76,10 +70,9 @@ export default function MobileMenu() {
         </li>
         <li>
           <Link
-            to="product-categories/dog-gear"
+            to="/categories/dog-gear"
             onClick={() => {
               dispatch(closeMobMenuAction());
-              window.scrollTo(0, 0);
             }}
           >
             DOG GEAR
@@ -87,10 +80,9 @@ export default function MobileMenu() {
         </li>
         <li>
           <Link
-            to="product-categories/food-and-hydration"
+            to="/categories/food-and-hydration"
             onClick={() => {
               dispatch(closeMobMenuAction());
-              window.scrollTo(0, 0);
             }}
           >
             FOOD & HYDRATION

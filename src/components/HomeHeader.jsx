@@ -35,67 +35,31 @@ export default function HomeHeader() {
           className="logo"
           onClick={() => {
             nav("/");
-            window.scrollTo(0, 0);
           }}
         >
           <img src={logoImg} alt="Wayfarer" />
         </div>
         <div className="nav-links">
           <li>
-            <Link
-              to="product-categories/all"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              SALE
-            </Link>
+            <Link to="/categories/all">SALE</Link>
           </li>
           <li>
-            <Link
-              to="product-categories/outfits"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              OUTFITS
-            </Link>
+            <Link to="/categories/outfits">OUTFITS</Link>
           </li>
           <li>
-            <Link
-              to="product-categories/gadgets"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              GADGETS
-            </Link>
+            <Link to="/categories/gadgets">GADGETS</Link>
           </li>
           <li>
-            <Link
-              to="product-categories/camping-kitchen"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              CAMP KITCHEN
-            </Link>
+            <Link to="/categories/camping-kitchen">CAMP KITCHEN</Link>
           </li>
           <li>
-            <Link
-              to="product-categories/camping-furniture"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              CAMP FURNITURE
-            </Link>
+            <Link to="/categories/camping-furniture">CAMP FURNITURE</Link>
           </li>
           <li>
-            <Link
-              to="product-categories/dog-gear"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              DOG GEAR
-            </Link>
+            <Link to="/categories/dog-gear">DOG GEAR</Link>
           </li>
           <li>
-            <Link
-              to="product-categories/food-and-hydration"
-              onClick={() => window.scrollTo(0, 0)}
-            >
-              FOOD & HYDRATION
-            </Link>
+            <Link to="/categories/food-and-hydration">FOOD & HYDRATION</Link>
           </li>
         </div>
 

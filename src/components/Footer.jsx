@@ -10,13 +10,17 @@ export default function Footer() {
     setMobileLayout(window.innerWidth <= 768);
   });
 
+  const handleScrollUp = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       {mobileLayout ? (
         <footer>
           <div className="social-links">
             {socialLinks.map((link, i) => (
-              <span onClick={() => window.scrollTo(0, 0)} key={i}>
+              <span onClick={handleScrollUp} key={i}>
                 <Link to={link.to}>{link.icon}</Link>
               </span>
             ))}
@@ -27,7 +31,7 @@ export default function Footer() {
                 <label>INFORMATION</label>
                 <div className="info-links">
                   {infoLinks.map((link, i) => (
-                    <li onClick={() => window.scrollTo(0, 0)} key={i}>
+                    <li onClick={handleScrollUp} key={i}>
                       <Link to={link.to}>{link.text}</Link>
                     </li>
                   ))}
@@ -37,7 +41,7 @@ export default function Footer() {
                 <label>HELP</label>
                 <div className="help-links">
                   {helpLinks.map((link, i) => (
-                    <li onClick={() => window.scrollTo(0, 0)} key={i}>
+                    <li onClick={handleScrollUp} key={i}>
                       <Link to={link.to}>{link.text}</Link>
                     </li>
                   ))}
@@ -62,7 +66,7 @@ export default function Footer() {
         <footer>
           <div className="social-links">
             {socialLinks.map((link, i) => (
-              <span onClick={() => window.scrollTo(0, 0)} key={i}>
+              <span onClick={handleScrollUp} key={i}>
                 <Link to={link.to}>{link.icon}</Link>
               </span>
             ))}
@@ -72,7 +76,7 @@ export default function Footer() {
               <label>INFORMATION</label>
               <div className="info-links">
                 {infoLinks.map((link, i) => (
-                  <li onClick={() => window.scrollTo(0, 0)} key={i}>
+                  <li onClick={handleScrollUp} key={i}>
                     <Link to={link.to}>{link.text}</Link>
                   </li>
                 ))}
@@ -82,7 +86,7 @@ export default function Footer() {
               <label>HELP</label>
               <div className="help-links">
                 {helpLinks.map((link, i) => (
-                  <li onClick={() => window.scrollTo(0, 0)} key={i}>
+                  <li onClick={handleScrollUp} key={i}>
                     <Link to={link.to}>{link.text}</Link>
                   </li>
                 ))}

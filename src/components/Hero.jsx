@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <div className="grid-container">
       <div className="featured grid-one">
-        <Link to="product-categories/all" onClick={() => window.scrollTo(0, 0)}>
+        <Link to="/categories/all" onClick={() => window.scrollTo(0, 0)}>
           <div id="img1" className="mini-overlay"></div>
           <img src={heroImg1} alt="Keep exploring" />
           <p className="description">Keep exploring</p>
@@ -17,7 +17,7 @@ export default function Hero() {
       </div>
       <div className="featured grid-two">
         <Link
-          to="product-categories/food-and-hydration"
+          to="/categories/food-and-hydration"
           onClick={() => window.scrollTo(0, 0)}
         >
           <div id="img2" className="mini-overlay"></div>
@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="featured grid-four">
         <Link
           onClick={() => window.scrollTo(0, 0)}
-          to="product-categories/camping-kitchen"
+          to="/categories/camping-kitchen"
         >
           <div id="img3" className="mini-overlay"></div>
           <img src={heroImg3} alt="Kitchen" />
@@ -36,10 +36,7 @@ export default function Hero() {
         </Link>
       </div>
       <div className="featured grid-four-low">
-        <Link
-          onClick={() => window.scrollTo(0, 0)}
-          to="product-categories/gadgets"
-        >
+        <Link onClick={() => window.scrollTo(0, 0)} to="/categories/gadgets">
           <div id="img4" className="mini-overlay"></div>
           <img src={heroImg4} alt="Gadgets" />
           <p className="description">Gadgets</p>

@@ -3,8 +3,6 @@ import {
   RiTwitterFill,
   RiInstagramFill,
   RiPinterestFill,
-  RiYoutubeFill,
-  RiSnapchatFill,
 } from "react-icons/ri";
 
 export const socialLinks = [
@@ -12,8 +10,6 @@ export const socialLinks = [
   { icon: <RiTwitterFill />, to: "#" },
   { icon: <RiInstagramFill />, to: "#" },
   { icon: <RiPinterestFill />, to: "#" },
-  { icon: <RiYoutubeFill />, to: "#" },
-  { icon: <RiSnapchatFill />, to: "#" },
 ];
 
 export const infoLinks = [

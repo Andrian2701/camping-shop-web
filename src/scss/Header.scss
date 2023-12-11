@@ -4,7 +4,6 @@
 
 header {
   width: 100%;
-  height: 110px;
   box-shadow: 0px 4px 5px -5px $header-shadow;
   -webkit-box-shadow: 0px 4px 5px -5px $header-shadow;
   -moz-box-shadow: 0px 4px 5px -5px $header-shadow;
@@ -13,12 +12,14 @@ header {
   z-index: 100;
   top: 0;
   left: 0;
-  @include flex-center;
 
   nav {
-    width: 90%;
-    height: 100%;
     @include space-between;
+    padding: 1.2rem 4vw;
+
+    @media (max-width: 1100px) {
+      padding: 0.6rem 7vw;
+    }
 
     .logo {
       img {
@@ -50,7 +51,7 @@ header {
 
     .icons {
       @include flex-center;
-      gap: 2rem;
+      gap: 1.5rem;
       width: 80px;
 
       .cart-icon {
@@ -112,9 +113,8 @@ header {
 // Mobile menu
 
 .mobile-menu {
-  width: 26.25rem;
+  width: 30rem;
   height: 100vh;
-  padding: 2rem 2.5rem 1.5rem;
   @include flex-column;
   position: fixed;
   top: 0;
@@ -122,6 +122,10 @@ header {
   background-color: $color-white;
   transition: all 0.4s ease;
   z-index: 1000;
+
+  @media (max-width: 500px) {
+    width: 22rem;
+  }
 
   .close-icon {
     display: flex;
@@ -131,6 +135,8 @@ header {
     transition: all 3 ease;
     color: $light-black;
     cursor: pointer;
+    padding-top: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .nav-links {
@@ -139,7 +145,7 @@ header {
     justify-content: center;
     list-style: none;
     gap: 1.3rem;
-    margin-top: 30%;
+    height: 100%;
 
     li {
       transition: all 3 ease;
@@ -159,7 +165,7 @@ header {
 
   &.closed {
     right: -100%;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease-in-out;
   }
 }
 

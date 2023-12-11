@@ -122,7 +122,7 @@ export const Items = [
   },
   {
     id: 2,
-    category: "camp-kitchen",
+    category: "camping-kitchen",
     img: plateImg1,
     imgs: [plateImg2, plateImg3],
     title: "Titanium Outdoor Plate",
@@ -146,7 +146,7 @@ export const Items = [
   },
   {
     id: 4,
-    category: "camp-furniture",
+    category: "camping-furniture",
     img: chairTwoImg1,
     imgs: [chairTwoImg2, chairTwoImg3],
     title: "Kestrel High Back Chair",
@@ -158,7 +158,7 @@ export const Items = [
   },
   {
     id: 5,
-    category: "camp-furniture",
+    category: "camping-furniture",
     img: tableOneImg1,
     imgs: [tableOneImg2, tableOneImg3],
     title: "Quechua Camping Table",
@@ -170,7 +170,7 @@ export const Items = [
   },
   {
     id: 6,
-    category: "camp-furniture",
+    category: "camping-furniture",
     img: chairOneImg1,
     imgs: [chairOneImg2, chairOneImg3],
     title: "Moonlite Reclining Chair",
@@ -194,7 +194,7 @@ export const Items = [
   },
   {
     id: 8,
-    category: "camp-kitchen",
+    category: "camping-kitchen",
     img: setrImg1,
     imgs: [setrImg2, setrImg3],
     title: "Stainless Camping Setr",
@@ -206,7 +206,7 @@ export const Items = [
   },
   {
     id: 9,
-    category: "camp-furniture",
+    category: "camping-furniture",
     img: tableTwoImg1,
     imgs: [tableTwoImg2, tableTwoImg3],
     title: "Folding Camping Table",
@@ -230,7 +230,7 @@ export const Items = [
   },
   {
     id: 11,
-    category: "camp-furniture",
+    category: "camping-furniture",
     img: hammockImg1,
     imgs: [hammockImg2, hammockImg3],
     title: "WanderLust Hammock",
@@ -278,7 +278,7 @@ export const Items = [
   },
   {
     id: 15,
-    category: "camp-kitchen",
+    category: "camping-kitchen",
     img: panTwoImg1,
     imgs: [panTwoImg2, panTwoImg3],
     title: "GSI Glacier Fry Pan",
@@ -338,7 +338,7 @@ export const Items = [
   },
   {
     id: 20,
-    category: "camp-kitchen",
+    category: "camping-kitchen",
     img: panOneImg1,
     imgs: [panOneImg2, panOneImg3],
     title: "Pinnacle Camping Pan",
@@ -362,7 +362,7 @@ export const Items = [
   },
   {
     id: 22,
-    category: "camp-kitchen",
+    category: "camping-kitchen",
     img: kettleImg1,
     imgs: [kettleImg3, kettleImg2],
     title: "Forrest Camping Kettle",
@@ -374,7 +374,7 @@ export const Items = [
   },
   {
     id: 23,
-    category: "camp-kitchen",
+    category: "camping-kitchen",
     img: sporksImg1,
     imgs: [sporksImg2, sporksImg3],
     title: "Sporks Steel Camping",
@@ -386,7 +386,7 @@ export const Items = [
   },
   {
     id: 24,
-    category: "camp-kitchen",
+    category: "camping-kitchen",
     img: thermosImg1,
     imgs: [thermosImg2, thermosImg3],
     title: "Thermos King Flask",
@@ -398,7 +398,7 @@ export const Items = [
   },
   {
     id: 25,
-    category: "camp-kitchen",
+    category: "camping-kitchen",
     img: grillImg1,
     imgs: [grillImg2, grillImg3],
     title: "Flame Portable Grill",
@@ -410,7 +410,7 @@ export const Items = [
   },
   {
     id: 26,
-    category: "camp-furniture",
+    category: "camping-furniture",
     img: tentTwoImg1,
     imgs: [tentTwoImg2, tentTwoImg3],
     title: "ALPS Lynx 1-Person Tent",
@@ -422,7 +422,7 @@ export const Items = [
   },
   {
     id: 27,
-    category: "camp-furniture",
+    category: "camping-furniture",
     img: tentOneImg1,
     imgs: [tentOneImg3, tentOneImg2],
     title: "Happy Camper Tent",

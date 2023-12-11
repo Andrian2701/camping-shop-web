@@ -1,16 +1,18 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Items } from "../../const/data";
 import "../../scss/CategoryItem.scss";
 
 export default function CampFurniture() {
-  const filteredItems = Items.filter(
-    (item) => item.category === "camp-furniture"
+  const memoizedFilteredItems = useMemo(
+    () => Items.filter((item) => item.category === "camping-furniture"),
+    []
   );
 
   return (
     <div className="category-items">
       <div className="items">
-        {filteredItems.map((item, idx) => (
+        {memoizedFilteredItems.map((item, idx) => (
           <Link
             key={idx}
             to={`/product-categories/product/${item.id}`}
@@ -18,7 +20,7 @@ export default function CampFurniture() {
           >
             <div className="item">
               <div className="item-header">
-                <img src={item.img} />
+                <img src={item.img} alt="furniture-img" />
               </div>
               <div className="item-details">
                 <p>{item.title}</p>

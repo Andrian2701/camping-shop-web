@@ -30,25 +30,23 @@ export default function App() {
   }, [cartProducts]);
 
   return (
-    <BrowserRouter>
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="product-categories" element={<Categories />}>
-            <Route path="all" element={<All />} />
-            <Route path="outfits" element={<Outfits />} />
-            <Route path="gadgets" element={<Gadgets />} />
-            <Route path="camping-kitchen" element={<CampKitchen />} />
-            <Route path="camping-furniture" element={<CampFurniture />} />
-            <Route path="dog-gear" element={<DogGear />} />
-            <Route path="food-and-hydration" element={<FoodAndHydration />} />
-          </Route>
-          <Route
-            path="product-categories/product/:id"
-            element={<ProductPage />}
-          />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="container">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/categories" element={<Categories />}>
+          <Route path="all" element={<All />} />
+          <Route path="outfits" element={<Outfits />} />
+          <Route path="gadgets" element={<Gadgets />} />
+          <Route path="camping-kitchen" element={<CampKitchen />} />
+          <Route path="camping-furniture" element={<CampFurniture />} />
+          <Route path="dog-gear" element={<DogGear />} />
+          <Route path="food-and-hydration" element={<FoodAndHydration />} />
+        </Route>
+        <Route
+          path="/product-categories/product/:id"
+          element={<ProductPage />}
+        />
+      </Routes>
+    </div>
   );
 }

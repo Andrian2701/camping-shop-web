@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { Items } from "../../const/data";
 import "../../scss/CategoryItem.scss";
 
-export default function All() {
+const All = () => {
   return (
     <div className="category-items">
       <div className="items">
-        {Items.map((item, i) => (
+        {Items.map((item) => (
           <Link
-            key={i}
+            key={item.title}
             to={`/product-categories/product/${item.id}`}
             onClick={() => window.scrollTo(0, 0)}
           >
@@ -26,4 +26,6 @@ export default function All() {
       </div>
     </div>
   );
-}
+};
+
+export default All;

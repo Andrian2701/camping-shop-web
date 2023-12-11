@@ -1,3 +1,4 @@
+import { useScrollTop } from "../hooks/useScrollTop";
 import HomeHeader from "../components/HomeHeader";
 import Hero from "../components/Hero";
 import MostSold from "../components/MostSold";
@@ -7,6 +8,8 @@ import TrendingNow from "../components/TrendingNow";
 import Footer from "../components/Footer";
 
 export default function HomePage() {
+  useScrollTop();
+
   return (
     <>
       <HomeHeader />

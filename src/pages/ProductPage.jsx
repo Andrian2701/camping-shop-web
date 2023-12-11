@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { useScrollTop } from "../hooks/useScrollTop";
 import { Items } from "../const/data";
-import OtherHeader from "../components/OtherHeader";
+import HomeHeader from "../components/HomeHeader";
 import Product from "../components/Product";
 import TrendingNow from "../components/TrendingNow";
 import Footer from "../components/Footer";
@@ -15,9 +16,11 @@ export default function CategoriesPage() {
     setSelectedImg(val);
   };
 
+  useScrollTop();
+
   return (
     <>
-      <OtherHeader />
+      <HomeHeader />
       <Product
         handleSetSelectedImg={handleSetSelectedImg}
         selectedImg={selectedImg}

@@ -3,9 +3,8 @@
 @use "./global/mixins" as *;
 
 .shop-cart {
-  width: 26.25rem;
+  width: 30rem;
   height: 100vh;
-  padding: 2rem 2.5rem 1.5rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -14,15 +13,23 @@
   transition: all 0.4s ease;
   z-index: 1000;
 
+  @media (max-width: 500px) {
+    width: 22rem;
+  }
+
   .cart-title {
     @include space-between;
 
     label {
       font-size: 1.25rem;
       font-weight: $fw-700;
+      padding-top: 2.5rem;
+      padding-left: 2.5rem;
     }
 
     .close-icon {
+      padding-top: 2.5rem;
+      padding-right: 2.5rem;
       font-size: 1.8rem;
       transition: all 3 ease;
       color: $light-black;
@@ -41,6 +48,10 @@
       align-items: center;
       overflow-y: scroll;
 
+      .cart-product {
+        width: 80%;
+      }
+
       .refresh-btn {
         width: 10rem;
         height: 2.7rem;
@@ -54,13 +65,15 @@
       width: 98%;
       height: 7.6rem;
       @include flex-center;
+      gap: 2rem;
       border-top: 2px solid $light-grey;
 
       .left-row {
         width: 50%;
         @include flex-column;
         gap: 0.3rem;
-        margin-bottom: 1.8rem;
+        margin-bottom: 1.5rem;
+        padding-left: 2.5rem;
 
         p {
           font-size: 1.6rem;
@@ -78,9 +91,10 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        padding-right: 2.5rem;
 
         button {
-          width: 15.6rem;
+          width: 12rem;
           height: 3rem;
           border: none;
           font-size: 1rem;

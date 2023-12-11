@@ -6,12 +6,16 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
   background: $color-white;
   color: $light-black;
+  overflow-x: hidden;
 
   .container {
     max-width: 1120px;

@@ -1,16 +1,18 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Items } from "../../const/data";
 import "../../scss/CategoryItem.scss";
 
 export default function FoodAndHydration() {
-  const filteredItems = Items.filter(
-    (item) => item.category === "food-and-hydration"
+  const memoizedFilteredItems = useMemo(
+    () => Items.filter((item) => item.category === "food-and-hydration"),
+    []
   );
 
   return (
     <div className="category-items">
       <div className="items">
-        {filteredItems.map((item, idx) => (
+        {memoizedFilteredItems.map((item, idx) => (
           <Link
             key={idx}
             to={`/product-categories/product/${item.id}`}

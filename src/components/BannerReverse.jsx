@@ -15,10 +15,7 @@ export default function BannerReverse() {
             Prepare for the season with the latest gear designed to enhance your
             autumn adventures.
           </p>
-          <Link
-            to="/product-categories/all"
-            onClick={() => window.scrollTo(0, 0)}
-          >
+          <Link to="/categories/all">
             <button>Shop Fall</button>
           </Link>
         </div>
